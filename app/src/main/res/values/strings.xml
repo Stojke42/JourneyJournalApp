@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">JourneyJournalApp</string>
+    <string name="LOGIN">LOGIN</string>
+    <string name="registration">SIGN UP</string>
+    <string name="name">User name</string>
+    <string name="password">Password</string>
+    <string name="email_address">Email</string>
+    <string name="cancel">CANCLE</string>
 </resources>
