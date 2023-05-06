@@ -70,16 +70,29 @@
         app:layout_constraintVertical_bias="0.078" />
 
     <Button
-        android:id="@+id/registerButton"
+        android:id="@+id/googleloginButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/registration"
-        android:onClick="register"
+        android:text="@string/google_login"
+        android:onClick="google_login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginButton"
+        app:layout_constraintVertical_bias="0.078" />
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/registration"
+        android:onClick="signup_from_login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/googleloginButton"
         app:layout_constraintVertical_bias="0.078" />
 
 

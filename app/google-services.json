@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "842491404443",
+    "project_id": "android-turistavlogger",
+    "storage_bucket": "android-turistavlogger.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842491404443:android:4f0bf42ef6d882dcef663e",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "842491404443-p1ojd3o09gd49oir6vo8afs3uip5jfm4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "27ff14aaff9350767320ad12ca7ea0a9b9befae6"
+          }
+        },
+        {
+          "client_id": "842491404443-k8ucrt2qa5rvajmkb32s5dih5bk5ha4f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWpHGKUQ_j4vzFDaCGCySSfswKKJcRODI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "842491404443-k8ucrt2qa5rvajmkb32s5dih5bk5ha4f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

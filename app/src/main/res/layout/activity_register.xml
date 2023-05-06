@@ -95,7 +95,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/registration"
-            android:onClick="register"/>
+            android:onClick="signup"/>
 
         <Button
             android:layout_width="wrap_content"
