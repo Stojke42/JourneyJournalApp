@@ -107,12 +107,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
     public void login(View view) {
         String userName = username.getText().toString();
         String password = userpassword.getText().toString();
-
-        // Log.i(LOG_TAG, "Bejelentkezett: " + userName + ", jelszó: " + password);
 
         mAuth.signInWithEmailAndPassword(userName, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override

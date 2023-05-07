@@ -7,4 +7,67 @@
     <string name="email_address">Email</string>
     <string name="cancel">CANCLE</string>
     <string name="google_login">Google login</string>
+
+    <string-array name="phone_labels">
+        <item>Otthon</item>
+        <item>Munkahely</item>
+        <item>Mobil</item>
+        <item>Egyéb</item>
+    </string-array>
+
+    <string-array name="shopping_item_names">
+        <item>Smart Phone</item>
+        <item>Tablet</item>
+        <item>Gaming PC</item>
+        <item>Oled TV</item>
+        <item>Kerékpár</item>
+        <item>Lego</item>
+        <item>Jelmez</item>
+        <item>Sport eszközök</item>
+        <item>Konyhai eszközök</item>
+
+    </string-array>
+
+    <string-array name="shopping_item_desc">
+        <item>Ez egy okos telefon!</item>
+        <item>Ez egy tablet!</item>
+        <item>Ez egy gamer pc!</item>
+        <item>Ez egy OLED TV!</item>
+        <item>Ez egy kerékpár!</item>
+        <item>Ez egy lego!</item>
+        <item>Ez egy jelmez!</item>
+        <item>Ezek sport eszközök!</item>
+        <item>Ezek konyhai eszküzök!</item>
+
+    </string-array>
+
+    <array name="shopping_item_rates">
+        <item>3.5</item>
+        <item>5</item>
+        <item>4</item>
+        <item>1.5</item>
+        <item>5</item>
+        <item>3</item>
+        <item>4.5</item>
+        <item>4</item>
+        <item>5</item>
+
+    </array>
+
+    <array name="shopping_item_images">
+        <item>@drawable/getto</item>
+        <item>@drawable/getto</item>
+        <item>@drawable/getto</item>
+        <item>@drawable/getto</item>
+        <item>@drawable/getto</item>
+        <item>@drawable/getto</item>
+        <item>@drawable/getto</item>
+        <item>@drawable/getto</item>
+        <item>@drawable/getto</item>
+
+    </array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 </resources>
