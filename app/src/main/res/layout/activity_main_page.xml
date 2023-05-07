@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MainPageActivity">
 
+
+
     <ImageView
         android:id="@+id/backgroundImage"
         android:layout_width="match_parent"
@@ -47,13 +49,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/main_page_text1"
         app:layout_constraintVertical_bias="0.115" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:scrollbars="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+         />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

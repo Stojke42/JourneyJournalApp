@@ -8,66 +8,71 @@
     <string name="cancel">CANCLE</string>
     <string name="google_login">Google login</string>
 
-    <string-array name="phone_labels">
-        <item>Otthon</item>
-        <item>Munkahely</item>
-        <item>Mobil</item>
-        <item>Egyéb</item>
-    </string-array>
 
-    <string-array name="shopping_item_names">
-        <item>Smart Phone</item>
-        <item>Tablet</item>
-        <item>Gaming PC</item>
-        <item>Oled TV</item>
-        <item>Kerékpár</item>
-        <item>Lego</item>
-        <item>Jelmez</item>
-        <item>Sport eszközök</item>
-        <item>Konyhai eszközök</item>
 
-    </string-array>
+    <string-array name="travel_names">
+        <item>Switzerland</item>
+        <item>Queenstown, New Zealand</item>
+        <item>Victoria Falls, Zambia/Zimbabwe</item>
+        <item>Cape Town, South AfricaCape Town, South Africa</item>
+        <item>Havelock Island, India </item>
+        <item>Rio de Janeiro, Brazil</item>
+        <item>Banff, Canada</item>
+        <item>Uvac, Serbia</item>
+        <item>Grand Canyon, USA</item>
+        <item>Denali national park, Alaska</item>
+        <item>Boom, Antwerp, Belgium</item>
+        <item>Dunakanyar, Hungary</item>
 
-    <string-array name="shopping_item_desc">
-        <item>Ez egy okos telefon!</item>
-        <item>Ez egy tablet!</item>
-        <item>Ez egy gamer pc!</item>
-        <item>Ez egy OLED TV!</item>
-        <item>Ez egy kerékpár!</item>
-        <item>Ez egy lego!</item>
-        <item>Ez egy jelmez!</item>
-        <item>Ezek sport eszközök!</item>
-        <item>Ezek konyhai eszküzök!</item>
 
     </string-array>
 
-    <array name="shopping_item_rates">
+    <string-array name="travel_text">
+        <item>Switzerland is a country known for its breathtaking natural beauty, picturesque alpine villages, and world-renowned chocolate and cheese. From the towering Swiss Alps to the serene lakes, Switzerland is a land of stunning contrasts that captivates visitors with its pristine landscapes and charming culture.</item>
+        <item>Queenstown, New Zealand is a picturesque town nestled in the heart of the Southern Alps on the shores of Lake Wakatipu. It\'s renowned as the adventure capital of the world, offering an endless array of adrenaline-fueled activities, including bungee jumping, skydiving, jet boating, and white water rafting.</item>
+        <item>Victoria Falls, located on the border between Zambia and Zimbabwe, is one of the most spectacular natural wonders in the world. Known locally as Mosi-oa-Tunya, which means "the smoke that thunders," the falls are an awe-inspiring sight to behold.</item>
+        <item>Cape Town, South Africa is a vibrant and cosmopolitan city located at the southern tip of Africa. With its stunning natural beauty, rich history and diverse culture, Cape Town is a destination that truly has it all.!</item>
+        <item>Havelock Island, located in the Andaman and Nicobar Islands of India, is a paradise for nature lovers and beach enthusiasts. With its crystal-clear waters, white sandy beaches, and lush green forests, Havelock Island is one of the most stunning destinations in India.</item>
+        <item>Rio de Janeiro, Brazil is a city known for its vibrant energy, stunning natural beauty, and rich cultural heritage. With its iconic landmarks, beautiful beaches, and lively atmosphere, Rio is a destination that truly has something for everyone.</item>
+        <item>Banff, Canada is a stunning destination located in the heart of the Rocky Mountains, known for its breathtaking natural beauty and world-class outdoor activities. With its soaring peaks, turquoise lakes, and diverse wildlife, Banff is a destination that is sure to leave visitors in awe.</item>
+        <item>Uvac is a river and nature reserve located in the southwestern part of Serbia, known for its stunning natural beauty and unique wildlife. The area is characterized by the winding Uvac river, which flows through steep limestone cliffs and deep canyons, creating a breathtaking landscape.</item>
+        <item>The Grand Canyon is a natural wonder located in northern Arizona, USA, known for its awe-inspiring beauty and stunning geology. Carved over millions of years by the Colorado River, the canyon stretches for over 277 miles and is up to 18 miles wide and one mile deep.</item>
+        <item>Denali National Park is a vast wilderness area located in the heart of Alaska, USA. Covering over six million acres, the park is home to towering peaks, sweeping glaciers, and diverse wildlife, including grizzly bears, wolves, moose, and caribou.</item>
+        <item>Tomorrowland is a world-renowned electronic dance music festival that takes place annually in Boom, Belgium. The festival attracts music lovers from around the world and has become known for its unique combination of music, art, and entertainment.</item>
+        <item>One of the most beautiful natural places in Hungary is the Danube Bend. The Danube Bend is a scenic area located just north of Budapest where the Danube River makes a sharp turn, creating a beautiful, winding river valley that is surrounded by lush hills and forests.</item>
+
+    </string-array>
+
+    <array name="travel_rates">
         <item>3.5</item>
         <item>5</item>
         <item>4</item>
         <item>1.5</item>
         <item>5</item>
         <item>3</item>
-        <item>4.5</item>
+        <item>5</item>
+        <item>5</item>
         <item>4</item>
         <item>5</item>
-
+        <item>5</item>
+        <item>4</item>
     </array>
 
-    <array name="shopping_item_images">
-        <item>@drawable/getto</item>
-        <item>@drawable/getto</item>
-        <item>@drawable/getto</item>
-        <item>@drawable/getto</item>
-        <item>@drawable/getto</item>
-        <item>@drawable/getto</item>
-        <item>@drawable/getto</item>
-        <item>@drawable/getto</item>
-        <item>@drawable/getto</item>
-
+    <array name="travel_image">
+        <item>@drawable/sw</item>
+        <item>@drawable/queenstown_new_zealand</item>
+        <item>@drawable/victoria_falls_zambia_zimbabwe</item>
+        <item>@drawable/cape_town_south_africa</item>
+        <item>@drawable/havelock_island_india</item>
+        <item>@drawable/rio_de_janeiro_brazil</item>
+        <item>@drawable/banff_canada</item>
+        <item>@drawable/uvac_serbia</item>
+        <item>@drawable/grand_canyon</item>
+        <item>@drawable/denali_alaska</item>
+        <item>@drawable/tomorrowland</item>
+        <item>@drawable/danube_bend</item>
     </array>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 
 </resources>

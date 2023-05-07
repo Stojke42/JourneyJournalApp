@@ -5,26 +5,29 @@ import androidx.core.view.MenuItemCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.Activity;
+import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.FrameLayout;
 import android.widget.SearchView;
 
-import com.example.myapplication.databinding.ActivityMainBinding;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MainPageActivity extends AppCompatActivity {
 
 
-
+    private Integer itemLimit = 5;
     private FirebaseUser user;
     private FirebaseUser mAuth;
 
@@ -38,6 +41,10 @@ public class MainPageActivity extends AppCompatActivity {
     private SharedPreferences preferences;
 
     private boolean viewRow = true;
+
+    private FirebaseFirestore mFirestore;
+    private CollectionReference mItems;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,44 +63,71 @@ public class MainPageActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main_page);
 
-
-
-
         mRecyclerView = findViewById(R.id.recyclerView);
-        // Set the Layout Manager.
         mRecyclerView.setLayoutManager(new GridLayoutManager(
                 this, gridNumber));
-        // Initialize the ArrayList that will contain the data.
         mItemsData = new ArrayList<>();
-        // Initialize the adapter and set it to the RecyclerView.
+
         mAdapter = new TravelItemAdapter(this, mItemsData);
         mRecyclerView.setAdapter(mAdapter);
-        // Get the data.
+
+
+        mFirestore = FirebaseFirestore.getInstance();
+        mItems=mFirestore.collection("Items");
+
+
+//        queryData();
         initializeData();
     }
+
+    private void queryData(){
+        mItemsData.clear();
+        mItems.orderBy("name").limit(1).get().addOnSuccessListener(queryDocumentSnapshots -> {
+            for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
+                TravelItem item = document.toObject(TravelItem.class);
+                mItemsData.add(item);
+            }
+
+            if (mItemsData.size() == 0) {
+                initializeData();
+                queryData();
+            }
+
+            // Notify the adapter of the change.
+            mAdapter.notifyDataSetChanged();
+        });
+
+    }
+
+
     private void initializeData() {
-        // Get the resources from the XML file.
         String[] itemsList = getResources()
-                .getStringArray(R.array.shopping_item_names);
+                .getStringArray(R.array.travel_names);
         String[] itemsInfo = getResources()
-                .getStringArray(R.array.shopping_item_desc);
+                .getStringArray(R.array.travel_text);
 
         TypedArray itemsImageResources =
-                getResources().obtainTypedArray(R.array.shopping_item_images);
-        TypedArray itemRate = getResources().obtainTypedArray(R.array.shopping_item_rates);
+                getResources().obtainTypedArray(R.array.travel_image);
+        TypedArray itemRate =
+                getResources().obtainTypedArray(R.array.travel_rates);
 
-        // Clear the existing data (to avoid duplication).
-        mItemsData.clear();
 
-        // Create the ArrayList of Sports objects with the titles and
-        // information about each sport.
-
+        Log.d(LOG_TAG, "init start ilist "+itemsList.length);
+        Log.d(LOG_TAG, "init start ilist "+ Arrays.toString(itemsList));
+        Log.d(LOG_TAG, "init start ilist "+ Arrays.toString(itemsInfo));
+        Log.d(LOG_TAG, "init start ilist "+itemsImageResources);
+        Log.d(LOG_TAG, "init start ilist "+itemRate);
+        for (int i = 0; i < itemsList.length; i++) {
+            mItemsData.add(new TravelItem(itemsList[i], itemsInfo[i], itemRate.getFloat(i, 0),
+                    itemsImageResources.getResourceId(i, 0)));
+        }
 
         // Recycle the typed array.
         itemsImageResources.recycle();
 
         // Notify the adapter of the change.
         mAdapter.notifyDataSetChanged();
+
     }
 
     @Override
@@ -124,8 +158,6 @@ public class MainPageActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
-
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {

@@ -4,7 +4,10 @@ public class TravelItem {
     private String name;
     private String info;
     private float rated;
-    private final int imageResource;
+    private  int imageResource;
+
+    public TravelItem() {
+    }
 
     public TravelItem(String name, String info, float rated, int imageResource) {
         this.name = name;

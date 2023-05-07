@@ -43,8 +43,5 @@
             android:text="item_info_placeholder" />
 
 
-
-
-
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

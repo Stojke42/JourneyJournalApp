@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -110,6 +111,11 @@ public class MainActivity extends AppCompatActivity {
     public void login(View view) {
         String userName = username.getText().toString();
         String password = userpassword.getText().toString();
+
+        if (TextUtils.isEmpty(userName) || TextUtils.isEmpty(password)) {
+            Toast.makeText(this, "Kérem töltse ki mindkét mezőt", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         mAuth.signInWithEmailAndPassword(userName, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
