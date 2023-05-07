@@ -34,14 +34,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/name"
-        android:inputType="text"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.303"
         tools:layout_editor_absoluteX="0dp"
         app:layout_constraintTop_toBottomOf="@+id/logintext"
         />
+<!--    <EditText-->
+<!--        android:id="@+id/userEmailEditText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:ems="10"-->
+<!--        android:hint="@string/email_address"-->
+<!--        android:inputType="textEmailAddress"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_below="@id/userNameEditText"/>-->
+
 
     <EditText
         android:id="@+id/editTextPassword"

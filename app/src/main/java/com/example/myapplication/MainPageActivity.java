@@ -134,7 +134,7 @@ public class MainPageActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.nav_bar, menu);
-        MenuItem menuItem = menu.findItem(R.id.contact_button);
+        MenuItem menuItem = menu.findItem(R.id.log_out_button);
         SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuItem);
 
         return true;
@@ -148,11 +148,11 @@ public class MainPageActivity extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 finish();
                 return true;
-            case R.id.contact_button:
-                Log.d(LOG_TAG, "Contact clicked!");
-                FirebaseAuth.getInstance().signOut();
-                finish();
-                return true;
+//            case R.id.contact_button:
+//                Log.d(LOG_TAG, "Contact clicked!");
+//                FirebaseAuth.getInstance().signOut();
+//                finish();
+//                return true;
 
             default:
                 return super.onOptionsItemSelected(item);
